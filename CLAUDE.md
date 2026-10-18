@@ -44,7 +44,11 @@ My part (Component 04): ML model that predicts future land prices (Rs per perch)
 - `results/`: earlier outputs and `best_price_model.joblib` (from the older Kaggle data run).
 
 ## Progress
-- Notebook 1 (`notebooks/01_data_understanding.ipynb`) done. Notebook 2 (data preparation) in progress, delivered cell by cell: load, half-year label + LVI join, time-adjust to 2025-H1, Land_type flags, save to `data/processed/`.
+- Notebook 1 (`notebooks/01_data_understanding.ipynb`) done.
+- Notebook 2 (`notebooks/02_data_preparation.ipynb`) done. Half-year label + LVI join, `price_adj` = price x 256.4 / LVI at listing time, 4 Land_type flags, dropped Mentioned Price (leakage) and Price_Scale.
+  Median check: raw +47.7%, adjusted almost flat (2021-H1 about 8% high; data grows slower than LVI, mention in limitations).
+  2025-H2 rows (624) set aside, no LVI yet. Outputs: `data/processed/land_model_data.csv` (5,376 x 39: ids, 32 features, target `log_price_adj`) and `land_2025H2_aside.csv`.
+- Next: Notebook 3 (Part A: Ridge, Random Forest, HistGradientBoosting; random 80/20 + area-held-out GroupKFold by Address_ID).
 
 ## Original task (Notebook 1 plan)
 Build **Notebook 1 (PP1)** with beginner-friendly simple English comments, delivered cell by cell: load + clean data, time-adjust to 2025-H1 level, compare 3 models with random split + area-held-out split (labelled as augmented data), then Part B LVI trend + backtest.
