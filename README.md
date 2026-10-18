@@ -10,8 +10,7 @@ AI-based land price forecasting for the Colombo District, part of the research p
 
 ## Data sources
 - 6,000-record Colombo land dataset (`data/raw/`), calibrated to the CBSL Land Valuation Indicator.
-- CBSL Land Valuation Indicator, half-yearly (`data/raw/cbsl_lvi_half_yearly_raw.xls`).
-- CBSL Asking Price Index, monthly (`data/raw/cbsl_asking_price_index_monthly_raw.xls`), optional cross-check.
+- CBSL Land Valuation Indicator, half-yearly (`data/raw/cbsl_half_yearly_dataset.xls`).
 
 ## Folder structure
 | Path | Purpose |

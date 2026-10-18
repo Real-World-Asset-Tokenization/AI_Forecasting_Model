@@ -4,12 +4,13 @@ Project: **Compliant Blockchain-Based Real-World Asset Tokenization on Ethereum*
 My part (Component 04): ML model that predicts future land prices (Rs per perch) for the Colombo District, to be integrated into the platform later.
 
 ## User preferences
-- User is a beginner in Jupyter/ML. Explain in **very simple Singlish** (Sinhala words in English letters + simple English).
-- Put short Singlish comments above every notebook cell.
+- User is a beginner in Jupyter/ML. Chat explanations in simple Singlish are fine.
+- Notebook comments: put short, **simple English** comments above every cell (NOT Singlish).
+- Give notebook cells **one by one in chat** (user runs each in Jupyter and checks output before the next). Do not write whole notebooks at once.
 - Be honest about data: the training data is augmented and must be labelled as such.
 
 ## Data
-- **Training data (final choice):** `data/cbsl_real_augmented_2021_2025.csv`
+- **Training data (final choice):** `data/raw/cbsl_land_dataset.csv`
   6,000 rows x 35 cols, 154 areas, 2021-01 to 2025-12. Augmented from real listings and calibrated to CBSL LVI (supervisor approved).
   ALWAYS describe it as "augmented, calibrated to CBSL Land Valuation Indicator, supervisor-approved". Never present it as raw real data.
 - `data/colombo_land_prices.csv` (Kaggle real listings, 4,494 rows, Jul-Sep 2021) is the SOURCE the 6,000-row set was built from (1,498 area+size overlaps). **Do NOT use it as an independent test set (leakage). Do not use it in PP1.** Keep it only for reference.
@@ -18,7 +19,7 @@ My part (Component 04): ML model that predicts future land prices (Rs per perch)
 - **CBSL LVI** (Colombo, half-yearly, 2017-H1 = 100), Overall:
   `[100,107,114.7,122.3,129.7,137.2,144.3,151.6,159.8,178.7,186.9,205.2,215.3,219.8,230.1,236.8,256.4]` (2017-H1 .. 2025-H1). 2025-H2 not yet published.
 
-- **CBSL raw files (use these, do not use pre-cleaned CSVs):** `data/raw/cbsl_lvi_half_yearly_raw.xls` (LVI, half-yearly 2017-H1..2025-H1; 2025-H2 empty) and `data/raw/cbsl_asking_price_index_monthly_raw.xls` (Asking Price Index, monthly 2021-Jan..2024-Sep). These .xls files are really HTML tables. Load and clean them inside the notebook with `src/load_cbsl.py` (`load_lvi_half_yearly`, `load_api_monthly`).
+- **CBSL raw files (use these, do not use pre-cleaned CSVs):** `data/raw/cbsl_half_yearly_dataset.xls` (LVI, half-yearly 2017-H1..2025-H1; 2025-H2 empty) and `data/raw/cbsl_asking_price_index_monthly_raw.xls` (Asking Price Index, monthly 2021-Jan..2024-Sep). These .xls files are really HTML tables. Load and clean them inside the notebook with `src/load_cbsl.py` (`load_lvi_half_yearly`, `load_api_monthly`).
 - **Decision:** monthly Asking Price Index NOT used for the trend: Lands API is noisy (corr -0.15 with LVI half-year changes), ends 2024-Sep, and is asking prices. Mention as evaluated-but-not-used in the notebook.
 
 ## Design (two parts)
@@ -43,7 +44,7 @@ My part (Component 04): ML model that predicts future land prices (Rs per perch)
 - `results/`: earlier outputs and `best_price_model.joblib` (from the older Kaggle data run).
 
 ## Next task
-Build **Notebook 1 (PP1)** with beginner Singlish comments: load + clean data, time-adjust to 2025-H1 level, compare 3 models with random split + area-held-out split (labelled as augmented data), then Part B LVI trend + backtest.
+Build **Notebook 1 (PP1)** with beginner-friendly simple English comments, delivered cell by cell: load + clean data, time-adjust to 2025-H1 level, compare 3 models with random split + area-held-out split (labelled as augmented data), then Part B LVI trend + backtest.
 
 ## Suggested repo name
 `colombo-land-price-forecasting`

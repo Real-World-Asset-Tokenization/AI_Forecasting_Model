@@ -1,0 +1,242 @@
+<style> .textmode { mso-number-format:\@; } </style><table>
+	<tr>
+		<td><div>
+			<table class="form_grid" cellspacing="0" rules="all" border="1" id="ContentPlaceHolder1_grdResult" style="border-collapse:collapse;">
+				<tr>
+					<th scope="col">&nbsp;</th><th scope="col">Item Name</th><th scope="col">Unit</th><th scope="col">Scale</th><th align="right" scope="col">2017-H1</th><th align="right" scope="col">2017-H2</th><th align="right" scope="col">2018-H1</th><th align="right" scope="col">2018-H2</th><th align="right" scope="col">2019-H1</th><th align="right" scope="col">2019-H2</th><th align="right" scope="col">2020-H1</th><th align="right" scope="col">2020-H2</th><th align="right" scope="col">2021-H1</th><th align="right" scope="col">2021-H2</th><th align="right" scope="col">2022-H1</th><th align="right" scope="col">2022-H2</th><th align="right" scope="col">2023-H1</th><th align="right" scope="col">2023-H2</th><th align="right" scope="col">2024-H1</th><th align="right" scope="col">2024-H2</th><th align="right" scope="col">2025-H1</th><th align="right" scope="col">2025-H2</th>
+				</tr><tr class="resultCell">
+					<td>
+
+                                                                <span id="ContentPlaceHolder1_grdResult_lblCount_0" class="resultGridLabel"></span>
+
+
+                                                            </td><td style="background-color:#FFFFB4;width:700px;">
+
+                                                                <span id="ContentPlaceHolder1_grdResult_ItemName_0" class="resultGridLabel">Property Indices-Land Price Indices</span>
+                                                                <span id="ContentPlaceHolder1_grdResult_lblhighlight_0"></span>
+                                                            </td><td style="background-color:#FFFFB4;width:70px;">&nbsp;</td><td style="background-color:#FFFFB4;width:70px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td><td align="left" style="background-color:#FFFFB4;width:60px;">&nbsp;</td>
+				</tr><tr>
+					<td>
+
+                                                                <span id="ContentPlaceHolder1_grdResult_lblCount_1" class="resultGridLabel">1</span>
+
+
+                                                            </td><td style="width:700px;">
+
+                                                                <span id="ContentPlaceHolder1_grdResult_ItemName_1" class="resultGridLabel">Land Valuations Indicator (LVI) for Colombo (2017 1st Half = 100) - Overall</span>
+                                                                <span id="ContentPlaceHolder1_grdResult_lblhighlight_1"></span>
+                                                            </td><td style="width:70px;">Index Value</td><td style="width:70px;">&nbsp;</td><td align="left" style="width:60px;">100</td><td align="left" style="width:60px;">107.00</td><td align="left" style="width:60px;">114.70</td><td align="left" style="width:60px;">122.30</td><td align="left" style="width:60px;">129.70</td><td align="left" style="width:60px;">137.20</td><td align="left" style="width:60px;">144.30</td><td align="left" style="width:60px;">151.60</td><td align="left" style="width:60px;">159.80</td><td align="left" style="width:60px;">178.70</td><td align="left" style="width:60px;">186.90</td><td align="left" style="width:60px;">205.20</td><td align="left" style="width:60px;">215.30</td><td align="left" style="width:60px;">219.80</td><td align="left" style="width:60px;">230.10</td><td align="left" style="width:60px;">236.80</td><td align="left" style="width:60px;">256.40</td><td align="left" style="width:60px;">&nbsp;</td>
+				</tr><tr>
+					<td>
+
+                                                                <span id="ContentPlaceHolder1_grdResult_lblCount_2" class="resultGridLabel">2</span>
+
+
+                                                            </td><td style="width:700px;">
+
+                                                                <span id="ContentPlaceHolder1_grdResult_ItemName_2" class="resultGridLabel">Land Valuations Indicator (LVI) for Colombo (2017 1st Half = 100) - Residential</span>
+                                                                <span id="ContentPlaceHolder1_grdResult_lblhighlight_2"></span>
+                                                            </td><td style="width:70px;">Index Value</td><td style="width:70px;">&nbsp;</td><td align="left" style="width:60px;">100</td><td align="left" style="width:60px;">106.80</td><td align="left" style="width:60px;">114.30</td><td align="left" style="width:60px;">121.70</td><td align="left" style="width:60px;">128.90</td><td align="left" style="width:60px;">136.60</td><td align="left" style="width:60px;">144.90</td><td align="left" style="width:60px;">152.00</td><td align="left" style="width:60px;">159.30</td><td align="left" style="width:60px;">176.30</td><td align="left" style="width:60px;">183.40</td><td align="left" style="width:60px;">203.10</td><td align="left" style="width:60px;">215.00</td><td align="left" style="width:60px;">221.00</td><td align="left" style="width:60px;">233.30</td><td align="left" style="width:60px;">242.90</td><td align="left" style="width:60px;">266.90</td><td align="left" style="width:60px;">&nbsp;</td>
+				</tr><tr>
+					<td>
+
+                                                                <span id="ContentPlaceHolder1_grdResult_lblCount_3" class="resultGridLabel">3</span>
+
+
+                                                            </td><td style="width:700px;">
+
+                                                                <span id="ContentPlaceHolder1_grdResult_ItemName_3" class="resultGridLabel">Land Valuations Indicator (LVI) for Colombo (2017 1st Half = 100) - Commercial</span>
+                                                                <span id="ContentPlaceHolder1_grdResult_lblhighlight_3"></span>
+                                                            </td><td style="width:70px;">Index Value</td><td style="width:70px;">&nbsp;</td><td align="left" style="width:60px;">100</td><td align="left" style="width:60px;">107.00</td><td align="left" style="width:60px;">114.70</td><td align="left" style="width:60px;">121.50</td><td align="left" style="width:60px;">128.50</td><td align="left" style="width:60px;">135.50</td><td align="left" style="width:60px;">142.00</td><td align="left" style="width:60px;">148.70</td><td align="left" style="width:60px;">158.70</td><td align="left" style="width:60px;">173.40</td><td align="left" style="width:60px;">182.80</td><td align="left" style="width:60px;">200.50</td><td align="left" style="width:60px;">210.30</td><td align="left" style="width:60px;">214.00</td><td align="left" style="width:60px;">228.10</td><td align="left" style="width:60px;">234.10</td><td align="left" style="width:60px;">254.30</td><td align="left" style="width:60px;">&nbsp;</td>
+				</tr><tr>
+					<td>
+
+                                                                <span id="ContentPlaceHolder1_grdResult_lblCount_4" class="resultGridLabel">4</span>
+
+
+                                                            </td><td style="width:700px;">
+
+                                                                <span id="ContentPlaceHolder1_grdResult_ItemName_4" class="resultGridLabel">Land Valuations Indicator (LVI) for Colombo (2017 1st Half = 100) - Industrial</span>
+                                                                <span id="ContentPlaceHolder1_grdResult_lblhighlight_4"></span>
+                                                            </td><td style="width:70px;">Index Value</td><td style="width:70px;">&nbsp;</td><td align="left" style="width:60px;">100</td><td align="left" style="width:60px;">107.20</td><td align="left" style="width:60px;">115.10</td><td align="left" style="width:60px;">123.70</td><td align="left" style="width:60px;">131.50</td><td align="left" style="width:60px;">139.40</td><td align="left" style="width:60px;">146.10</td><td align="left" style="width:60px;">154.10</td><td align="left" style="width:60px;">161.30</td><td align="left" style="width:60px;">186.60</td><td align="left" style="width:60px;">194.60</td><td align="left" style="width:60px;">212.00</td><td align="left" style="width:60px;">220.70</td><td align="left" style="width:60px;">224.50</td><td align="left" style="width:60px;">228.90</td><td align="left" style="width:60px;">233.20</td><td align="left" style="width:60px;">248.00</td><td align="left" style="width:60px;">&nbsp;</td>
+				</tr>
+			</table>
+		</div></td>
+	</tr><tr>
+		<td>&nbsp;</td>
+	</tr><tr>
+		<td><div>
+			<table cellspacing="0" id="ContentPlaceHolder1_grdFootNotes" style="border-collapse:collapse;">
+				<tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_0" style="font-family:verdana;font-size:11px;font-weight:bold;">Notes</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_1" style="font-family:verdana;font-size:11px;font-weight:bold;"></span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_2" style="font-family:verdana;font-size:11px;font-weight:bold;">1) Land Valuations Indicator (LVI) for Colombo (2017 1st Half = 100) - Overall</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_3" style="font-family:verdana;font-size:11px;font-weight:normal;">Sector:Real Sector</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_4" style="font-family:verdana;font-size:11px;font-weight:normal;">Source:CBSL</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_5" style="font-family:verdana;font-size:11px;font-weight:normal;">GeoArea:National                      </span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_6" style="font-family:verdana;font-size:11px;font-weight:normal;">Note:LPI covers 82 centers of all Divisional Secretariat Divisions in Colombo
+District.
+Compiled based on per perch bare land price data collected from the Government Valuation Department of Sri Lanka.
+Base Year: 2017 1st Half=100.
+
+
+The whole series of LVI (2017 H1 =100) was revised in June 2022 based on the re-estimated data provided by the Government Valuation Department with the revisions introduced to their valuation methodology.</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_7" style="font-family:verdana;font-size:11px;font-weight:normal;">Data last updated:2025-09-04</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_8" style="font-family:verdana;font-size:11px;font-weight:normal;">Update frequency:60th day after the semi annum</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_9" style="font-family:verdana;font-size:11px;font-weight:bold;">2) Land Valuations Indicator (LVI) for Colombo (2017 1st Half = 100) - Residential</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_10" style="font-family:verdana;font-size:11px;font-weight:normal;">Sector:Real Sector</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_11" style="font-family:verdana;font-size:11px;font-weight:normal;">Source:CBSL</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_12" style="font-family:verdana;font-size:11px;font-weight:normal;">GeoArea:National                      </span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_13" style="font-family:verdana;font-size:11px;font-weight:normal;">Note:Base Year: 2017 1st Half=100.
+LPI covers 82 centers of all Divisional Secretariat Divisions in Colombo
+District.
+
+The whole series of LVI (2017 H1 =100) was revised in June 2022 based on the re-estimated data provided by the Government Valuation Department with the revisions introduced to their valuation methodology.</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_14" style="font-family:verdana;font-size:11px;font-weight:normal;">Data last updated:2025-09-04</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_15" style="font-family:verdana;font-size:11px;font-weight:normal;">Update frequency:60th day after the semi annum</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_16" style="font-family:verdana;font-size:11px;font-weight:bold;">3) Land Valuations Indicator (LVI) for Colombo (2017 1st Half = 100) - Commercial</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_17" style="font-family:verdana;font-size:11px;font-weight:normal;">Sector:Real Sector</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_18" style="font-family:verdana;font-size:11px;font-weight:normal;">Source:CBSL</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_19" style="font-family:verdana;font-size:11px;font-weight:normal;">GeoArea:National                      </span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_20" style="font-family:verdana;font-size:11px;font-weight:normal;">Note:Base Year: 2017 1st Half=100.
+LPI covers 82 centers of all Divisional Secretariat Divisions in Colombo
+District.
+
+The whole series of LVI (2017 H1 =100) was revised in June 2022 based on the re-estimated data provided by the Government Valuation Department with the revisions introduced to their valuation methodology.</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_21" style="font-family:verdana;font-size:11px;font-weight:normal;">Data last updated:2025-09-04</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_22" style="font-family:verdana;font-size:11px;font-weight:normal;">Update frequency:60th day after the semi annum</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_23" style="font-family:verdana;font-size:11px;font-weight:bold;">4) Land Valuations Indicator (LVI) for Colombo (2017 1st Half = 100) - Industrial</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_24" style="font-family:verdana;font-size:11px;font-weight:normal;">Sector:Real Sector</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_25" style="font-family:verdana;font-size:11px;font-weight:normal;">Source:CBSL</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_26" style="font-family:verdana;font-size:11px;font-weight:normal;">GeoArea:National                      </span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_27" style="font-family:verdana;font-size:11px;font-weight:normal;">Note:Base Year: 2017 1st Half=100.
+LPI covers 82 centers of all Divisional Secretariat Divisions in Colombo
+District.
+
+The whole series of LVI (2017 H1 =100) was revised in June 2022 based on the re-estimated data provided by the Government Valuation Department with the revisions introduced to their valuation methodology.</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_28" style="font-family:verdana;font-size:11px;font-weight:normal;">Data last updated:2025-09-04</span>
+                                                                
+                                                            </td>
+				</tr><tr>
+					<td>&nbsp;</td><td>
+                                                                <span id="ContentPlaceHolder1_grdFootNotes_lblNote_29" style="font-family:verdana;font-size:11px;font-weight:normal;">Update frequency:60th day after the semi annum</span>
+                                                                
+                                                            </td>
+				</tr>
+			</table>
+		</div></td>
+	</tr>
+</table>
