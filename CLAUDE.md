@@ -43,7 +43,10 @@ My part (Component 04): ML model that predicts future land prices (Rs per perch)
 - `src/component4_pipeline.py`: earlier pipeline (Part A models, Part B backtest, Part C combine). Part C should use drift forecast.
 - `results/`: earlier outputs and `best_price_model.joblib` (from the older Kaggle data run).
 
-## Next task
+## Progress
+- Notebook 1 (`notebooks/01_data_understanding.ipynb`) done. Notebook 2 (data preparation) in progress, delivered cell by cell: load, half-year label + LVI join, time-adjust to 2025-H1, Land_type flags, save to `data/processed/`.
+
+## Original task (Notebook 1 plan)
 Build **Notebook 1 (PP1)** with beginner-friendly simple English comments, delivered cell by cell: load + clean data, time-adjust to 2025-H1 level, compare 3 models with random split + area-held-out split (labelled as augmented data), then Part B LVI trend + backtest.
 
 ## Suggested repo name
