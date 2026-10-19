@@ -1,0 +1,5 @@
+model,MAPE_%,MAE_points
+Holt,1.33,3.32
+Drift,1.52,3.82
+Linear,1.98,4.93
+Naive,8.64,21.3

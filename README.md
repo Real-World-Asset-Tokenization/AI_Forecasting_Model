@@ -17,7 +17,8 @@ AI-based land price forecasting for the Colombo District, part of the research p
 |---|---|
 | `data/raw/` | Original files. Never edited. |
 | `data/processed/` | Cleaned data and saved train/test splits |
-| `notebooks/` | Jupyter notebooks, run in numeric order |
+| `notebooks/model_a_land_value/` | Part A notebooks 01-04, run in numeric order |
+| `notebooks/model_b_trend/` | Part B (LVI trend) notebooks |
 | `models/` | Saved models and preprocessing pipelines |
 | `reports/figures/` | Charts for slides |
 | `reports/tables/` | Result tables (CSV) |

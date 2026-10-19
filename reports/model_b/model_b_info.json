@@ -1,0 +1,8 @@
+{
+  "chosen_model": "Drift",
+  "last_period": "2025-H1",
+  "last_lvi": 256.4,
+  "drift_step_per_half_year": 9.774999999999999,
+  "error_pct_per_half_year": 1.76,
+  "note": "LVI forecast from CBSL half-yearly data (17 points). Range = average rolling backtest error, not a statistical guarantee."
+}

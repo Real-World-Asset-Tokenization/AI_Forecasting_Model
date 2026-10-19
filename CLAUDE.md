@@ -11,10 +11,10 @@ My part (Component 04): ML model that predicts future land prices (Rs per perch)
 
 ## Data
 - **Training data (final choice):** `data/raw/cbsl_land_dataset.csv`
-  6,000 rows x 35 cols, 154 areas, 2021-01 to 2025-12. Augmented from real listings and calibrated to CBSL LVI (supervisor approved).
-  ALWAYS describe it as "augmented, calibrated to CBSL Land Valuation Indicator, supervisor-approved". Never present it as raw real data.
+  6,000 rows x 35 cols, 154 areas, 2021-01 to 2025-12. Augmented from real listings and calibrated to CBSL LVI.
+  ALWAYS describe it as "augmented, calibrated to CBSL Land Valuation Indicator". Never present it as raw real data.
 - `data/colombo_land_prices.csv` (Kaggle real listings, 4,494 rows, Jul-Sep 2021) is the SOURCE the 6,000-row set was built from (1,498 area+size overlaps). **Do NOT use it as an independent test set (leakage). Do not use it in PP1.** Keep it only for reference.
-- **Evaluation (PP1):** (a) random 80/20 split, and (b) **area-held-out split** (GroupKFold by Address_ID, test areas never seen in training). Always label results: "augmented data, calibrated to CBSL LVI, supervisor-approved". Real-world validation with fresh 2025/26 listings (ikman.lk / lankapropertyweb) is planned for PP2.
+- **Evaluation (PP1):** (a) random 80/20 split, and (b) **area-held-out split** (GroupKFold by Address_ID, test areas never seen in training). Always label results: "augmented data, calibrated to CBSL LVI". Real-world validation with fresh 2025/26 listings (ikman.lk / lankapropertyweb) is planned for PP2.
 - 1 row = 1 listing. Target = `Price per Perch`. Features: `Land_size(Perches)`, `Land_type`, `Distance from fort`, `min_dist_*` / `count_*` amenity features. Location features are constant per area (Address_ID).
 - **CBSL LVI** (Colombo, half-yearly, 2017-H1 = 100), Overall:
   `[100,107,114.7,122.3,129.7,137.2,144.3,151.6,159.8,178.7,186.9,205.2,215.3,219.8,230.1,236.8,256.4]` (2017-H1 .. 2025-H1). 2025-H2 not yet published.
@@ -44,11 +44,11 @@ My part (Component 04): ML model that predicts future land prices (Rs per perch)
 - `results/`: earlier outputs and `best_price_model.joblib` (from the older Kaggle data run).
 
 ## Progress
-- Notebook 1 (`notebooks/01_data_understanding.ipynb`) done.
-- Notebook 2 (`notebooks/02_data_preparation.ipynb`) done. Half-year label + LVI join, `price_adj` = price x 256.4 / LVI at listing time, 4 Land_type flags, dropped Mentioned Price (leakage) and Price_Scale.
+- Notebook 1 (`notebooks/model_a_land_value/01_data_understanding.ipynb`) done.
+- Notebook 2 (`notebooks/model_a_land_value/02_data_preparation.ipynb`) done. Half-year label + LVI join, `price_adj` = price x 256.4 / LVI at listing time, 4 Land_type flags, dropped Mentioned Price (leakage) and Price_Scale.
   Median check: raw +47.7%, adjusted almost flat (2021-H1 about 8% high; data grows slower than LVI, mention in limitations).
   2025-H2 rows (624) set aside, no LVI yet. Outputs: `data/processed/land_model_data.csv` (5,376 x 39: ids, 32 features, target `log_price_adj`) and `land_2025H2_aside.csv`.
-- Notebook 3 (`notebooks/03_model_training.ipynb`) done. Models changed to Ridge, Random Forest, XGBoost (xgboost 3.4.1 installed). Random 80/20 split (seed 42, 4,300 train / 1,076 test); 111 of 113 test areas also in train (random test will look optimistic). Tuning by 5-fold GroupKFold on Address_ID inside train only. Validation (log RMSE / R2 / MAPE): Ridge 0.493 / 0.775 / 41.8%, RF 0.497 / 0.772 / 41.5%, XGBoost 0.502 / 0.767 / 41.5%; models are tied (gap 0.01 < fold std 0.05). RF best params at grid edge (could widen). Saved: `models/` (3 joblib, best_params.json, split_info.json), `data/processed/train_80.csv`, `test_20_untouched.csv`, `reports/tables/03_validation_*.csv`. Test set not used for any tuning.
+- Notebook 3 (`notebooks/model_a_land_value/03_model_training.ipynb`) done. Models changed to Ridge, Random Forest, XGBoost (xgboost 3.4.1 installed). Random 80/20 split (seed 42, 4,300 train / 1,076 test); 111 of 113 test areas also in train (random test will look optimistic). Tuning by 5-fold GroupKFold on Address_ID inside train only. Validation (log RMSE / R2 / MAPE): Ridge 0.493 / 0.775 / 41.8%, RF 0.497 / 0.772 / 41.5%, XGBoost 0.502 / 0.767 / 41.5%; models are tied (gap 0.01 < fold std 0.05). RF best params at grid edge (could widen). Saved: `models/` (3 joblib, best_params.json, split_info.json), `data/processed/train_80.csv`, `test_20_untouched.csv`, `reports/tables/03_validation_*.csv`. Test set not used for any tuning.
 - Next: Notebook 4 (`04_model_evaluation.ipynb`): final evaluation of all 3 models on untouched 20% test (R2, MAPE, median APE, share within +-20/30%, RMSE/MAE log, area-wise breakdown). Do NOT report "100 - MAPE" as accuracy.
 
 ## Original task (Notebook 1 plan)

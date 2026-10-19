@@ -1,0 +1,5 @@
+model,MAPE_%,n_forecasts
+Drift,3.54,24
+Holt,4.48,24
+Linear,4.69,24
+Naive,10.17,24
