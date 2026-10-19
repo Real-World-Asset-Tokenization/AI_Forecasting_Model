@@ -48,7 +48,8 @@ My part (Component 04): ML model that predicts future land prices (Rs per perch)
 - Notebook 2 (`notebooks/02_data_preparation.ipynb`) done. Half-year label + LVI join, `price_adj` = price x 256.4 / LVI at listing time, 4 Land_type flags, dropped Mentioned Price (leakage) and Price_Scale.
   Median check: raw +47.7%, adjusted almost flat (2021-H1 about 8% high; data grows slower than LVI, mention in limitations).
   2025-H2 rows (624) set aside, no LVI yet. Outputs: `data/processed/land_model_data.csv` (5,376 x 39: ids, 32 features, target `log_price_adj`) and `land_2025H2_aside.csv`.
-- Next: Notebook 3 (Part A: Ridge, Random Forest, HistGradientBoosting; random 80/20 + area-held-out GroupKFold by Address_ID).
+- Notebook 3 (`notebooks/03_model_training.ipynb`) done. Models changed to Ridge, Random Forest, XGBoost (xgboost 3.4.1 installed). Random 80/20 split (seed 42, 4,300 train / 1,076 test); 111 of 113 test areas also in train (random test will look optimistic). Tuning by 5-fold GroupKFold on Address_ID inside train only. Validation (log RMSE / R2 / MAPE): Ridge 0.493 / 0.775 / 41.8%, RF 0.497 / 0.772 / 41.5%, XGBoost 0.502 / 0.767 / 41.5%; models are tied (gap 0.01 < fold std 0.05). RF best params at grid edge (could widen). Saved: `models/` (3 joblib, best_params.json, split_info.json), `data/processed/train_80.csv`, `test_20_untouched.csv`, `reports/tables/03_validation_*.csv`. Test set not used for any tuning.
+- Next: Notebook 4 (`04_model_evaluation.ipynb`): final evaluation of all 3 models on untouched 20% test (R2, MAPE, median APE, share within +-20/30%, RMSE/MAE log, area-wise breakdown). Do NOT report "100 - MAPE" as accuracy.
 
 ## Original task (Notebook 1 plan)
 Build **Notebook 1 (PP1)** with beginner-friendly simple English comments, delivered cell by cell: load + clean data, time-adjust to 2025-H1 level, compare 3 models with random split + area-held-out split (labelled as augmented data), then Part B LVI trend + backtest.

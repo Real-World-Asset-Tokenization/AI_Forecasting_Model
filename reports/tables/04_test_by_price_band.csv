@@ -1,0 +1,16 @@
+Model,Price band,Rows,Median_APE_%,Median_signed_error_%
+Ridge,Lowest,216,22.454,19.718
+Ridge,Low,215,17.21,-0.498
+Ridge,Middle,215,12.816,-8.346
+Ridge,High,215,19.152,-7.499
+Ridge,Highest,215,21.49,-11.583
+Random Forest,Lowest,216,6.889,3.153
+Random Forest,Low,215,7.628,0.542
+Random Forest,Middle,215,6.405,-2.486
+Random Forest,High,215,17.21,-0.675
+Random Forest,Highest,215,17.988,-9.766
+XGBoost,Lowest,216,8.655,6.951
+XGBoost,Low,215,9.19,-2.15
+XGBoost,Middle,215,6.93,-3.701
+XGBoost,High,215,18.853,-1.255
+XGBoost,Highest,215,20.032,-11.514

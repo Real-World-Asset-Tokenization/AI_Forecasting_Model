@@ -1,0 +1,17 @@
+{
+  "Ridge": {
+    "ridge__alpha": 100
+  },
+  "Random Forest": {
+    "max_depth": 10,
+    "max_features": 1.0,
+    "min_samples_leaf": 5
+  },
+  "XGBoost": {
+    "colsample_bytree": 1.0,
+    "learning_rate": 0.03,
+    "max_depth": 5,
+    "min_child_weight": 5,
+    "n_estimators": 200
+  }
+}
