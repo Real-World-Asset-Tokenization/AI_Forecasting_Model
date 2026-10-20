@@ -1,0 +1,4 @@
+,R2_mean,R2_std,RMSE_log_mean,RMSE_log_std
+Ridge,0.7534,0.1027,0.4764,0.061
+Random Forest,0.6566,0.0823,0.5716,0.0436
+XGBoost,0.661,0.0916,0.5655,0.0387
