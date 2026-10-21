@@ -1,0 +1,10 @@
+{
+  "formula": "future price = Part A base price x (LVI_future / LVI_base)",
+  "part_a_model_default": "Random Forest",
+  "part_a_price_level": "2025-H1",
+  "part_b_model": "Drift",
+  "lvi_base": 256.4,
+  "forecast_periods": "2025-H1 to 2028-H2",
+  "range_note": "Low/high shows only the Part B (LVI trend) uncertainty. The Part A error (test MAPE about 23%) is not included.",
+  "data_note": "Part A training data is augmented and calibrated to the CBSL LVI."
+}
