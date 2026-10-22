@@ -18,22 +18,55 @@ from predict_price import (  # noqa: E402
 
 st.set_page_config(page_title="Land Price Forecast", page_icon="🏞️", layout="wide")
 
-TEAL = "#0f766e"
-ORANGE = "#ea580c"
+TEAL = "#1fdf6e"      # accent green
+ORANGE = "#d6a644"    # amber
+SURFACE = "#222325"
+BORDER = "#2f3032"
+SOFT_TEXT = "#c9ccd1"
+
+# Dark chart style (same look as the app cards)
+plt.rcParams.update({
+    "figure.facecolor": SURFACE, "axes.facecolor": SURFACE, "savefig.facecolor": SURFACE,
+    "axes.edgecolor": BORDER, "axes.labelcolor": SOFT_TEXT, "axes.titlecolor": "#ffffff",
+    "text.color": "#ffffff", "xtick.color": SOFT_TEXT, "ytick.color": SOFT_TEXT,
+    "grid.color": BORDER, "legend.labelcolor": "#e5e7eb",
+})
 
 # ---------- Style ----------
 st.markdown(
     """
     <style>
-    .hero {background: linear-gradient(135deg, #0f766e 0%, #1d4ed8 100%);
-           padding: 22px 28px; border-radius: 14px; margin-bottom: 18px;}
-    .hero h1 {color: white; margin: 0; padding: 0; font-size: 2rem;}
-    .hero p {color: rgba(255,255,255,0.88); margin: 6px 0 0 0; font-size: 0.95rem;}
-    [data-testid="stMetric"] {background: rgba(128,128,128,0.08);
-           border: 1px solid rgba(128,128,128,0.25); border-radius: 12px; padding: 14px 16px;}
+    :root {--bg:#191a1c; --surface:#222325; --inner:#18191b; --border:#2f3032;
+           --accent:#1fdf6e; --amber:#d6a644; --muted:#9a9ea6;}
+    html, body, [class*="css"] {font-family: Inter, "Segoe UI", system-ui, sans-serif;}
+    .block-container {padding-top: 1.4rem; max-width: 1200px;}
     [data-testid="stAppDeployButton"], #MainMenu, footer {display: none !important;}
-    .step {background: rgba(15,118,110,0.10); border-left: 4px solid #0f766e;
-           padding: 10px 14px; border-radius: 6px; margin-bottom: 8px;}
+    [data-testid="stHeader"] {background: transparent;}
+    [data-testid="stSidebar"] {background: var(--inner); border-right: 1px solid var(--border);}
+
+    .topbar {display:flex; align-items:center; justify-content:space-between;
+             padding: 4px 0 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 22px;}
+    .brand {display:flex; align-items:center; gap:10px; font-weight:600; font-size:0.95rem;}
+    .logo {width:32px; height:32px; border-radius:9px; background:var(--accent);
+           display:flex; align-items:center; justify-content:center;}
+    .page-title {font-size:2.2rem; font-weight:800; line-height:1.15; margin:0 0 6px 0;}
+    .page-sub {color:var(--muted); margin-bottom:18px; font-size:0.95rem;}
+
+    .pill {display:inline-block; padding:2px 11px; border-radius:999px; font-size:0.75rem;
+           font-weight:600; border:1px solid; margin:0 6px 8px 0;}
+    .pill.green {color:#3ddc84; border-color:#1d6b3f; background:rgba(31,223,110,0.10);}
+    .pill.amber {color:#d6a644; border-color:#6b5217; background:rgba(214,166,68,0.10);}
+
+    [data-testid="stMetric"] {background:var(--surface); border:1px solid var(--border);
+           border-radius:14px; padding:16px 18px;}
+    [data-testid="stMetricValue"] {font-weight:700;}
+    [data-testid="stExpander"] {background:var(--surface); border:1px solid var(--border); border-radius:12px;}
+    [data-testid="stDataFrame"] {border:1px solid var(--border); border-radius:12px; overflow:hidden;}
+    [data-baseweb="tab-list"] {gap:6px;}
+    button[role="tab"] {border-radius:999px; padding:6px 16px;}
+
+    .step {background:var(--inner); border:1px solid var(--border); border-left:3px solid var(--accent);
+           padding:12px 14px; border-radius:10px; margin-bottom:10px;}
     </style>
     """,
     unsafe_allow_html=True,
@@ -84,11 +117,16 @@ pred = load_predictor()
 # ---------- Header ----------
 st.markdown(
     """
-    <div class="hero">
-      <h1>🏞️ Colombo Land Price Forecast</h1>
-      <p>Component 04 · AI-based asset performance prediction for the land tokenization platform.<br>
-      Price per perch = Part A land value model (base price) × Part B CBSL LVI trend forecast.</p>
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b1f12"
+             stroke-width="2.4" stroke-linejoin="round"><path d="M12 2l9 5v10l-9 5-9-5V7z"/></svg></div>
+        <span>Land price forecast</span>
+      </div>
+      <div><span class="pill green">Component 04 · AI Forecasting</span></div>
     </div>
+    <div class="page-title">Colombo Land Price Forecast</div>
+    <div class="page-sub">Price per perch = Part A land value model (base price) × Part B CBSL LVI trend forecast.</div>
     """,
     unsafe_allow_html=True,
 )
@@ -121,13 +159,19 @@ base = result["base_price_2025H1"]
 mid = result["price_per_perch_mid"]
 
 tab_forecast, tab_compare, tab_val, tab_how = st.tabs(
-    ["📈 Forecast", "🆚 Compare areas", "✅ Validation", "ℹ️ How it works"])
+    ["Forecast", "Compare areas", "Validation", "How it works"])
 
 # =====================================================================
 # Tab 1: Forecast
 # =====================================================================
 with tab_forecast:
     st.subheader(f"{area.title()}  ·  {perches:g} perches  ·  {', '.join(land_types)}  ·  {period}")
+    st.markdown(
+        f'<span class="pill green">Part A · {model_name}</span>'
+        f'<span class="pill green">Part B · Drift trend</span>'
+        f'<span class="pill amber">{period}</span>',
+        unsafe_allow_html=True,
+    )
 
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Price per perch (mid)", rs(mid), f"{(mid / base - 1) * 100:+.1f}% vs 2025-H1",
@@ -293,8 +337,8 @@ with tab_val:
     )
 
     PART_A_COLS = {"Ridge": "pred_ridge", "Random Forest": "pred_random_forest", "XGBoost": "pred_xgboost"}
-    COLORS = {"Ridge": "#6366f1", "Random Forest": TEAL, "XGBoost": ORANGE,
-              "Drift": TEAL, "Holt": ORANGE, "Linear": "#6366f1", "Naive": "#9ca3af"}
+    COLORS = {"Ridge": "#5aa9ff", "Random Forest": TEAL, "XGBoost": ORANGE,
+              "Drift": TEAL, "Holt": ORANGE, "Linear": "#5aa9ff", "Naive": "#9ca3af"}
 
     tables_dir = REPORT_DIR / "tables"
     preds_df = read_csv_or_none(tables_dir / "04_test_predictions.csv")
